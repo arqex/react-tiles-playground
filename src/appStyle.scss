@@ -1,0 +1,333 @@
+@import 'vars';
+
+body {
+	font-family: 'Roboto'
+}
+
+h1,h2,h3,h4, .rt {
+	font-family: 'Merienda';
+	color: $purple;
+}
+
+ul > li {
+	margin-bottom: 10px;
+}
+
+.rt {
+	font-weight: 800;
+}
+
+.smallTile {
+	font-size: 15px;
+}
+.tinyTile {
+	h1 {
+		font-size: 1.7em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	h3 {
+		font-size: 1.3em;
+	}
+	h4 {
+		font-size: 1.15em;
+	}
+}
+
+
+a {
+	text-decoration: none;
+	color: #E0617A;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.menu {
+	position: fixed;
+	width: 200px;
+	min-height: 100%;
+	background: #FFD24D;
+	z-index: 10;
+	padding: 20px 0;
+	box-shadow: 0 0 3px rgba(0,0,0,.1);
+	color: $purple;
+	border-right: 2px solid $purple;
+
+	.menuToggle {
+		display: none;
+		color: #fff;
+		padding: 5px;
+		font-size: 30px;
+		line-height: 18px;
+		background: $yellow;
+		border-top-right-radius: 2px;
+		border-bottom-right-radius: 2px;
+		opacity: .2;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		img {
+			width: 24px;
+		}
+	}
+}
+
+.logo {
+	img {
+		width: 80px;
+		margin: 0 auto;
+		display: block;
+	}
+	h1 {
+		font-size: 24px;
+		text-align: center;
+	}
+}
+
+.menuItems {
+	border-radius: 3px;
+}
+
+.menuItem {
+	display: block;
+	border-bottom: 2px solid $purple;
+	margin-top: -2px;
+	color: $purple;
+	padding: 10px 20px;
+	font-family: 'Merienda';
+
+	a {
+	color: $purple;
+	}
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.tile {
+	position: absolute;
+	height: 100%;
+	background: #fff;
+
+	&.float {
+		border: 1px solid #fde;
+		box-shadow: 0 2px 5px rgba(0,0,0,.1);
+		background: #fff;
+		position: absolute;
+	}
+
+	&.bottom {
+		border-top: 1px solid #fde;
+	}
+
+	&.right {
+		border-left: 1px solid #fde;
+		right: 0;
+	}
+
+	&.min {
+		color: #fff;
+		background: $color;
+		overflow: hidden;
+		padding: 0;
+		cursor: pointer;
+	}
+}
+
+.tilecontent {
+	padding: 20px;
+
+	&>div {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+}
+
+
+
+
+.minTileTitle {
+	display: inline-block;
+	width: 160px;
+	padding: 5px 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height: 21px;
+}
+.minTileClose {
+	float: right;
+	padding: 5px 10px;
+	line-height: 21px;
+}
+
+.moving .tile.main {
+	transition: width .5s, height .5s;
+}
+
+
+
+.appContent {
+	margin-left: 200px;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+
+	&.side {
+		.mainContent {
+			width: 50%;
+		}
+		.sideContent {
+			opacity: 1;
+			width: 50%
+		}
+	}
+
+	&.moving, &.resizing {
+		user-select: none,
+	}
+}
+.mainContent {
+	width: 100%;
+}
+
+.smallWindow {
+	.menu {
+		position: absolute;
+		left: -200px;
+		transition: left .5s;
+
+		.menuToggle {
+			display: block;
+			position: absolute;
+			left: 100%;
+			display: block;
+			transition: opacity .5s;
+			cursor: pointer;
+		}
+
+		&.menuOpen {
+
+			left: 0;
+			.menuToggle {
+				opacity: 0;
+			}
+		}
+	}
+	.appContent {
+		margin-left: 0;
+	}
+}
+
+.window {
+	position: relative;
+}
+.tileControls {
+	position: absolute;
+	top: -$padding;
+	right: 0;
+	width: 100%;
+	text-align: right;
+	cursor: move;
+	padding: $padding $padding $padding/2;
+	opacity: .5;
+	transition: opacity .5s;
+
+	&:hover {
+		opacity: 1;
+	}
+	a {
+		cursor: pointer;
+		font-weight: bold;
+		color: #DB315E;
+		transition: background .3s, color .3s;
+		display: inline-block;
+		width: 40px;
+		height: 25px;
+		line-height: 25px;
+		vertical-align: top;
+		text-align: center;
+
+		&:hover {
+			background: rgba(0,0,0,.05);
+		}
+		&.tileControlClose:hover {
+			background: #DB3131;
+			color: #fff;
+		}
+	}
+}
+
+.windowContent {
+	padding-top: 1px;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.6em;
+}
+h4 {
+	font-size: 1.3em;
+}
+
+.resizer, .tileResizers>div {
+	position: absolute;
+	z-index: 5;
+}
+
+.rightResizer {
+	height: 100%;
+	width: 5px;
+	cursor: e-resize;
+}
+
+.bottomResizer {
+	width: 100%;
+	height: 5px;
+	cursor: n-resize;
+}
+
+
+button, .btn {
+	background-color: $purple;
+	color: #eee;
+	border: 0;
+	border-bottom: 1px solid rgba(0,0,0,.3);
+	padding: 5px 10px;
+	border-radius: 4px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.2);
+	transition: background-color .3s;
+
+	&:hover {
+		background-color: lighten($purple, 8);
+	}
+
+	.rt {
+		color: #eee;
+	}
+}
+
+.tileiframe .tilecontent {
+	padding: 0;
+}
+
+.warn {
+	background: #fee;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+code {
+	background: #ffe;
+	border: 1px solid #eed;
+}
