@@ -1,0 +1,3 @@
+[submodule "src/react-tiles"]
+	path = src/react-tiles
+	url = https://github.com/arqex/react-tiles.git
