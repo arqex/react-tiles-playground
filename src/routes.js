@@ -4,6 +4,8 @@ var React = require('react'),
 	Sidebar = require('./screens/SidebarScreen'),
 	SidebarLink = require('./screens/SidebarLinkScreen'),
 	FloatingTile = require('./screens/FloatingTileScreen'),
+	GetStarted = require('./screens/GetStartedScreen'),
+	Troubleshoot = require('./screens/TroubleshootScreen'),
 	App = require('./App')
 ;
 
@@ -24,6 +26,8 @@ var routes = (
 			<Route path="/sidebar" component={ Sidebar } />
 			<Route path="/sidebarLink" component={ SidebarLink } />
 			<Route path="/floatingTile" component={ FloatingTile } />
+			<Route path="/getStarted" component={ GetStarted } />
+			<Route path="/troubleshoot" component={ Troubleshoot } />
 		</Route>
 	</Router>
 );

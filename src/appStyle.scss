@@ -1,12 +1,16 @@
 @import 'vars';
 
 body {
-	font-family: 'Roboto'
+	font-family: 'Roboto';
 }
 
 h1,h2,h3,h4, .rt {
 	font-family: 'Merienda';
 	color: $purple;
+}
+
+h3, h4 {
+	margin: 2em 0 .8em 0;
 }
 
 ul > li {
@@ -85,7 +89,14 @@ a {
 	h1 {
 		font-size: 24px;
 		text-align: center;
+		margin-bottom: 0;
 	}
+}
+
+.version {
+	text-align: center;
+	font-size: .8em;
+	margin-bottom: 20px;
 }
 
 .menuItems {
@@ -146,7 +157,12 @@ a {
 		max-width: 900px;
 		margin: 0 auto;
 	}
+
+	p {
+		line-height: 1.5em;
+	}
 }
+
 
 
 
@@ -330,4 +346,8 @@ button, .btn {
 code {
 	background: #ffe;
 	border: 1px solid #eed;
+}
+
+code, pre {
+	font-size: .9em;
 }

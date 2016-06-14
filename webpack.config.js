@@ -24,7 +24,8 @@ module.exports = {
 		loaders: [
 			{ test: /\.jsx?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
 			{ test: /\.css$/, loader: "style!css" },
-			{ test: /\.scss$/, loader: "style!css!postcss-loader!sass" }
+			{ test: /\.scss$/, loader: "style!css!postcss-loader!sass" },
+			{ test: /\.html$/, loader: "html" }
 		]
 	},
 	postcss: [ autoprefixer ],
@@ -34,7 +35,8 @@ module.exports = {
 			src: paths.src,
 			assets: Path.join( __dirname, 'assets' ),
 			components: Path.join( paths.src, 'ui/components'),
-			lib: Path.join( paths.src, 'lib')
+			lib: Path.join( paths.src, 'lib'),
+			snippets: Path.join( __dirname, 'snippets')
 		}
 	},
 	plugins: [

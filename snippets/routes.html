@@ -1,0 +1,19 @@
+var React = require('react');
+var {Router, Route, IndexRoute, hashHistory } = require('react-router');
+
+// This is the path to our previous defined App component
+var App = require('./App');
+
+// Some app's screen components
+var Home = require('./Home')
+var Hello = require('./Hello')
+
+var Router = ReactRouter
+module.exports = (
+  <Router history={ hashHistory } >
+    <Route path="/" component={ App }>
+      <IndexRoute component={ Home } />
+      <Route path="/sidebar" component={ Sidebar } />
+    </Route>
+  </Router>
+);

@@ -1,5 +1,6 @@
 var React = require('react'),
-	RouterLink = require('react-router').Link
+	RouterLink = require('react-router').Link,
+	Tiles = require('./react-tiles/src/react-tiles')
 ;
 
 var Menu = React.createClass({
@@ -22,22 +23,23 @@ var Menu = React.createClass({
 					<img src="/assets/img/react-tiles-logo.png" />
 					<h1>react-tiles</h1>
 				</div>
+				<div className="version">v{ Tiles.version }</div>
 				<div className="menuItems">
 					<div className="menuItem">
 						<span>· </span>
-						<RouterLink to='/posts'>Home</RouterLink>
+						<RouterLink to='/'>Home</RouterLink>
 					</div>
 					<div className="menuItem">
 						<span>· </span>
-						<RouterLink to='/posts'>Home</RouterLink>
+						<RouterLink to='/getStarted'>Get started</RouterLink>
 					</div>
 					<div className="menuItem">
 						<span>· </span>
-						<RouterLink to='/posts'>Home</RouterLink>
+						<RouterLink to='/troubleshoot'>Troubleshoot</RouterLink>
 					</div>
 					<div className="menuItem">
 						<span>· </span>
-						<RouterLink to='/posts'>Home</RouterLink>
+						<a href='https://github.com/arqex/react-tiles'>Github</a>
 					</div>
 				</div>
 			</div>

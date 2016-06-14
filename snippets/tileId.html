@@ -1,0 +1,11 @@
+var React = require('react');
+
+// Some generic abstraction of the store
+var AppStore = require('MyStore');
+
+var User = React.createClass({
+  render: function(){
+    var userData = AppStore.tiles[ this.props.layout.id ];
+    return <UserData user={ userData } />;
+  }
+});
