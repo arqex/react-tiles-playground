@@ -42,6 +42,9 @@ var Menu = React.createClass({
 						<a href='https://github.com/arqex/react-tiles'>Github</a>
 					</div>
 				</div>
+				<div className="copy">
+					2016 by <a href="http://arqex.com" className="rt">arqex</a>
+				</div>
 			</div>
 		);
 	},

@@ -25,7 +25,7 @@ var GetStarted = React.createClass({
           <Code>{ require('snippets/usage.html')}</Code>
           The <code>Code</code> component is aware of the current app route, so you can use it as your root component. If you are using <code>react-router</code> the following route definition will tilify your app:
           <Code>{ require('snippets/routes.html')}</Code>
-          It's perfectly possible to use the <code>Tiles</code> component besides other React components/elements, have a look at <a href="https://github.com/arqex/react-tiles-playground/blob/master/src/App.js" target="_blank">how this site uses react-tiles</a> to get an idea of how to add a side menu like the one here.
+          It is perfectly possible to use the <code>Tiles</code> component besides other React components/elements, have a look at <a href="https://github.com/arqex/react-tiles-playground/blob/master/src/App.js" target="_blank">how this site uses react-tiles</a> to get an idea of how to add a side menu like the one here.
         </div>
         <div>
           <h3>Understanding the layouts</h3>
