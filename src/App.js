@@ -2,7 +2,8 @@ var React = require('react'),
 	Menu = require('./Menu'),
 	Router = require('react-router'),
 	ObjectAssign = require('object-assign'),
-	Tiles = require('./react-tiles/src/react-tiles')
+	Tiles = require('./react-tiles/src/react-tiles'),
+	resolver = require('./react-tiles/src/react-router-resolver')
 ;
 
 var RouteHandler = Router.RouteHandler;
@@ -20,7 +21,7 @@ var App = React.createClass({
 			<div className={ appClass }>
 				<Menu />
 				<div className="appContent tileManager">
-					{ React.createElement(Tiles, this.props ) }
+					<Tiles {...this.props} resolver={ resolver } />
 				</div>
 			</div>
 		);

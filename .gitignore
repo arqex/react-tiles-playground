@@ -30,3 +30,8 @@ node_modules
 # Built scripts
 assets/bundle.js
 assets/bundle.js.map
+
+# Firebase
+.firebaserc
+.database.rules.json
+firebase.json

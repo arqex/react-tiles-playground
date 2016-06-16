@@ -12,7 +12,7 @@ var React = require('react'),
 var Router = RRouter.Router,
 	Route = RRouter.Route,
 	IndexRoute = RRouter.IndexRoute,
-	history = RRouter.hashHistory
+	history = RRouter.browserHistory
 ;
 
 /*

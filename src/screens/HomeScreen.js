@@ -72,7 +72,8 @@ var Home = React.createClass({
     });
 
     console.log( url );
-    location.href = url;
+    this.props.history.push( url );
+    // location.href = url;
   }
 });
 
