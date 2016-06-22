@@ -1,5 +1,4 @@
 var React = require('react'),
-  Router = require('react-router'),
   Tiles = require('../react-tiles/src/react-tiles')
 ;
 
@@ -30,7 +29,7 @@ var Home = React.createClass({
           <h3>I want to know more</h3>
           <p>Do you think <span className="rt">react tiles</span> fits your needs?</p>
           <ul>
-            <li><Router.Link to="/getStarted">Get started using <span className="rt">react tiles</span></Router.Link>.</li>
+            <li><Link to="/getStarted" single>Get started using <span className="rt">react tiles</span></Link>.</li>
           </ul>
         </div>
         <div>
@@ -38,7 +37,7 @@ var Home = React.createClass({
           <p>That is really nice! This is a really young project in an alpha stage that for sure can use good developers help.</p>
           <ul>
             <li><a href="https://github.com/arqex/react-tiles">Fork <span className="rt">react tiles</span> on github</a>.</li>
-            <li>Be sure that you understand how it works <Router.Link to="/getStarted">reading the getting started guide</Router.Link>.</li>
+            <li>Be sure that you understand how it works <Link to="/getStarted" single>reading the getting started guide</Link>.</li>
             <li><a href="https://github.com/arqex/react-tiles">This site is also available on github</a>. It is the perfect way of learning and try your own modifications to the source.</li>
           </ul>
         </div>
@@ -66,14 +65,12 @@ var Home = React.createClass({
     }
 
     var url = builder.setTile({
-      target: 'sidebar',
-      type: 'column',
+      wrapper: 'sidebar',
       route: '/sidebar'
     });
 
     console.log( url );
     this.props.history.push( url );
-    // location.href = url;
   }
 });
 

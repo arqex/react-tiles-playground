@@ -6,6 +6,8 @@ var React = require('react'),
 	FloatingTile = require('./screens/FloatingTileScreen'),
 	GetStarted = require('./screens/GetStartedScreen'),
 	Troubleshoot = require('./screens/TroubleshootScreen'),
+	GetStarted = require('./screens/GetStartedScreen'),
+	TestLink = require('./screens/TestLinkScreen'),
 	App = require('./App')
 ;
 
@@ -28,6 +30,7 @@ var routes = (
 			<Route path="/floatingTile" component={ FloatingTile } />
 			<Route path="/getStarted" component={ GetStarted } />
 			<Route path="/troubleshoot" component={ Troubleshoot } />
+			<Route path="/testLink" component={ TestLink } />
 		</Route>
 	</Router>
 );

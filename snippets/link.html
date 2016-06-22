@@ -1,0 +1,28 @@
+// Require the Link component
+var Link = require('react-tiles').Link;
+
+//... in your component's render method
+
+// This will open /troubleshot in the same tile
+<Link to="/testLink">Default</Link>
+
+// This will remove all the tiles and open the link
+// in a new free layout
+<Link to="/testLink" single>Single</Link>
+
+// This will open a floating tile with the route
+<Link to="/testLink" wrapper="floating">Floating</Link>
+
+// Any other wrapper attribute value is considered as an id,
+// if the wrapper exists in the layout open a new tile in it
+// otherwise it creates the wrapper
+<Link to="/testLink" wrapper="side">Wrapper Id</Link>
+
+// A tile id is given,
+// if the tile exists, the link is open in that tile
+// otherwise open a new tile in the current wrapper
+// but the current wrapper is a free one, it creates a new wrapper for it
+<Link to="/testLink" tile="top">Tile id</Link>
+
+// It is possible to use a tile and wrapper id
+<Link to="/testLink" wrapper="side" tile="mytile">Tile and wrapper id</link>

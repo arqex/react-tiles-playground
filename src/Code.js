@@ -1,6 +1,4 @@
-var React = require('react'),
-  styles = require('react-syntax-highlighter/dist/styles')
-;
+var React = require('react');
 
 module.exports = React.createClass({
   render: function(){

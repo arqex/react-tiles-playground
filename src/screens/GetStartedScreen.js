@@ -41,8 +41,17 @@ var GetStarted = React.createClass({
           <h3>Everything is about URLs</h3>
           <p>Even if <span className="rt">react-tiles</span> is a tool with a nice visual impact, the most important part of it is not the tiles but the URLs.</p>
           <p>Every time a tile is open a new URL is generated that includes the route of the open tile, so you can share or save the layout. This url centered approach makes easier to open, close or update tiles in the layout using actual links, and it plays really well with the browser history.</p>
-          <p>A convienent <code>Link</code> component is shiped with <span className="rt">react-tiles</span> to make the navigation simple inside you tiled application. For example, <Link to="/sidebar">here it is a link that works inside this tile</Link>.</p>
-          <p>Do you want to use it in your app? <Link to="/getStarted">Get started now!</Link></p>
+          <p>A convienent <code>Link</code> component is shiped with <span className="rt">react-tiles</span> to make the navigation simple inside you tiled application. Here we have some examples of its usage:</p>
+          <Code lang="html">{ require("snippets/link.html") }</Code>
+          <p>And here you can see them working</p>
+          <p>
+            <Link to="/testLink">Default</Link> - Needs to have more tiles open to see it working.<br/>
+            <Link to="/testLink" single>Single</Link> - Needs to have more tiles open to see it working.<br/>
+            <Link to="/testLink" wrapper="floating">Floating</Link><br/>
+            <Link to="/testLink" wrapper="side">Wrapper Id</Link><br/>
+            <Link to="/testLink" tile="top">Tile id</Link><br/>
+            <Link to="/testLink" wrapper="side" tile="mytile">Tile and wrapper id</Link>
+          </p>
         </div>
       </div>
     )

@@ -35,3 +35,4 @@ assets/bundle.js.map
 .firebaserc
 .database.rules.json
 firebase.json
+public
