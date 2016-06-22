@@ -8,6 +8,7 @@ var React = require('react'),
 	Troubleshoot = require('./screens/TroubleshootScreen'),
 	GetStarted = require('./screens/GetStartedScreen'),
 	TestLink = require('./screens/TestLinkScreen'),
+	TestLinkAlternative = require('./screens/TestLinkAlternativeScreen'),
 	App = require('./App')
 ;
 
@@ -31,6 +32,7 @@ var routes = (
 			<Route path="/getStarted" component={ GetStarted } />
 			<Route path="/troubleshoot" component={ Troubleshoot } />
 			<Route path="/testLink" component={ TestLink } />
+			<Route path="/testLinkAlternative" component={ TestLinkAlternative } />
 		</Route>
 	</Router>
 );

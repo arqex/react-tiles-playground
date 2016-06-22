@@ -23,7 +23,8 @@ var GetStarted = React.createClass({
           <h3>Usage</h3>
           <span className="rt">react tiles</span> is nothing but an usual React.js component, its basic usage is basic straightforward.
           <Code>{ require('snippets/usage.html')}</Code>
-          The <code>Code</code> component is aware of the current app route, so you can use it as your root component. If you are using <code>react-router</code> the following route definition will tilify your app:
+          <p>In the example we are using the <code>react-router-resolver</code> to tell <span className="rt">react tiles</span> how to handle the routes and navigate using <a href="https://github.com/reactjs/react-router">react-router</a>. See the <Link to={ this.props.layout.route + '#resolvers' }>resolvers section</Link> to know more.</p>
+          The <code>Tiles</code> component is aware of the current app route, so you can use it as your root component. If you are using <code>react-router</code> the following route definition will tilify your app:
           <Code>{ require('snippets/routes.html')}</Code>
           It is perfectly possible to use the <code>Tiles</code> component besides other React components/elements, have a look at <a href="https://github.com/arqex/react-tiles-playground/blob/master/src/App.js" target="_blank">how this site uses react-tiles</a> to get an idea of how to add a side menu like the one here.
         </div>
@@ -49,8 +50,26 @@ var GetStarted = React.createClass({
             <Link to="/testLink" single>Single</Link> - Needs to have more tiles open to see it working.<br/>
             <Link to="/testLink" wrapper="floating">Floating</Link><br/>
             <Link to="/testLink" wrapper="side">Wrapper Id</Link><br/>
-            <Link to="/testLink" tile="top">Tile id</Link><br/>
-            <Link to="/testLink" wrapper="side" tile="mytile">Tile and wrapper id</Link>
+            <Link to="/testLink" tile="top">Tile id</Link> - <Link to="/testLinkAlternative" tile="top">Alternative route</Link><br/>
+            <Link to="/testLink" wrapper="side" tile="mytile">Tile and wrapper id</Link> - <Link to="/testLinkAlternative" wrapper="side" tile="mytile">Alternative route</Link><br/>
+            <Link to="/testLink" tile="bottom" type="row">Row layout</Link> - Needs to be in a <Link to={ this.props.layout.route } single>free layout</Link>.
+          </p>
+        </div>
+        <div id="resolvers">
+          <h3>Resolvers</h3>
+          <p>
+            Initially, <span className="rt">react tiles</span> doesn't know about the routes of your app or how to navigate within it. All
+            that logic depends on the routing solution you are using, so to make <span className="rt">react tiles</span> work
+            along with your routes you need to create a <strong>resolver</strong>.
+          </p>
+          <p>
+            A resolver to work with <a href="https://github.com/reactjs/react-router">react-router v2</a> is shipped with the <span className="rt">react tiles </span>
+            package. If that's your routing library you can make it work declaring that resolver when using the <code>Tiles</code> component:
+          </p>
+          <Code>{ require('snippets/usage.html') }</Code>
+          <p>
+            If you are using any other routing library, you can create your own resolver easily. See
+            <a href="https://github.com/arqex/react-tiles/blob/master/src/react-router-resolver.js"> how the react-router-resolver works</a> to create your own.
           </p>
         </div>
       </div>
