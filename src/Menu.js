@@ -22,6 +22,7 @@ var Menu = React.createClass({
 				<div className="logo">
 					<img src="/assets/img/react-tiles-logo.png" />
 					<h1>react-tiles</h1>
+					<span className="beta">beta</span>
 				</div>
 				<div className="version">v{ Tiles.version }</div>
 				<div className="menuItems">
@@ -32,6 +33,10 @@ var Menu = React.createClass({
 					<div className="menuItem">
 						<span>· </span>
 						<RouterLink to='/getStarted'>Get started</RouterLink>
+					</div>
+					<div className="menuItem">
+						<span>· </span>
+						<RouterLink to='/api'>API docs</RouterLink>
 					</div>
 					<div className="menuItem">
 						<span>· </span>

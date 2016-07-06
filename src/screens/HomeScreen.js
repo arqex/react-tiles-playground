@@ -19,7 +19,7 @@ var Home = React.createClass({
           <p>If you are developing a react app and you need to display more than one route at the same time <span className="rt">react-tiles</span> is here to help.</p>
           <button onClick={ () => this.showSidebar() }>Show me <span className="rt">react-tiles</span> working now!</button>
           { this.renderTooMany() }
-          <p><span className="rt">react tiles</span> divides your app's layout in columns or rows loading one or more routes in them, the way you can use all the app's screen you need at the same time, in one browser window. <strong>Try to click the button above again!</strong></p>
+          <p><span className="rt">react tiles</span> divides your app's layout in tiles loading one route in each of them, the way you can use all the app's screens you need at the same time in one browser window. <strong>Try to click the button above again!</strong></p>
           <p>But not everything is about columns and rows. Your may prefer to freed your tiles:</p>
           <Link to="/floatingTile" className="btn" wrapper="floating">Open a float tile</Link>
           <p>Isn't it nice? You can create all the tiles you want and drag them to the bottom and the left of the screen to create crazy layouts.</p>
@@ -33,7 +33,7 @@ var Home = React.createClass({
           </ul>
         </div>
         <div>
-          <h3>I want to know collaborate</h3>
+          <h3>I want to collaborate</h3>
           <p>That is really nice! This is a really young project in an alpha stage that for sure can use good developers help.</p>
           <ul>
             <li><a href="https://github.com/arqex/react-tiles">Fork <span className="rt">react tiles</span> on github</a>.</li>

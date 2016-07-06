@@ -72,6 +72,30 @@ var GetStarted = React.createClass({
             <a href="https://github.com/arqex/react-tiles/blob/master/src/react-router-resolver.js"> how the react-router-resolver works</a> to create your own.
           </p>
         </div>
+        <div>
+          <h3>Tile context</h3>
+          <p>
+            When your routes get into a tile, they are aware of what is surrounding them thanks to the context <code>props</code> that <span className="rt">react tiles </span>
+          injects into them. Here they are:
+          </p>
+
+          <ul>
+            <li>
+              <code>this.props.layout</code>: Defines the current tile layout. It is useful to know what is the current tile id:
+              <Code>{ require('snippets/tileLayout.html') }</Code>
+            </li>
+            <li>
+              <code>this.props.wrapper</code>: If you need to know what the layout of our the tile's wrapper or how many tiles is the tile sharing the wrapper with, the <code>wrapper</code> prop is really handy:
+              <Code>{ require('snippets/wrapperLayout.html') }</Code>
+            </li>
+            <li>
+              <code>this.props.builder</code>: The URL query builder helps to create URLs that remove or add a new tile to the layout programatically. See the query builder docs to know more.
+            </li>
+            <li>
+              <code>this.props.resolver</code>: The same resolver that it's passed to the main <code>Tiles</code> component to translate the routes into Components.
+            </li>
+          </ul>
+        </div>
       </div>
     )
   }

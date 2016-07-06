@@ -81,6 +81,7 @@ a {
 }
 
 .logo {
+	position: relative;
 	img {
 		width: 80px;
 		margin: 0 auto;
@@ -90,6 +91,13 @@ a {
 		font-size: 24px;
 		text-align: center;
 		margin-bottom: 0;
+	}
+	.beta {
+		position: absolute;
+		bottom: 25px;
+		right: 20px;
+		transform: rotate(15deg);
+		font-size: .85em;
 	}
 }
 

@@ -9,6 +9,7 @@ var React = require('react'),
 	GetStarted = require('./screens/GetStartedScreen'),
 	TestLink = require('./screens/TestLinkScreen'),
 	TestLinkAlternative = require('./screens/TestLinkAlternativeScreen'),
+	Api = require('./screens/ApiScreen'),
 	App = require('./App')
 ;
 
@@ -32,6 +33,7 @@ var routes = (
 			<Route path="/getStarted" component={ GetStarted } />
 			<Route path="/troubleshoot" component={ Troubleshoot } />
 			<Route path="/testLink" component={ TestLink } />
+			<Route path="/api" component={ Api } />
 			<Route path="/testLinkAlternative" component={ TestLinkAlternative } />
 		</Route>
 	</Router>
