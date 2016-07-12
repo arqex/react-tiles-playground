@@ -5,7 +5,7 @@ var resolver = require('react-tiles/src/react-router-resolver');
 var App = React.createClass({
   render(){
     return (
-      <Tiles resolver={ resolver } />
+      <Tiles resolver={ resolver } { ...this.props } />
     )
   }
 });
