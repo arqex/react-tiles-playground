@@ -3,6 +3,7 @@ var gulp = require('gulp'),
 	webpack = require('gulp-webpack'),
   del = require('del'),
   Path = require('path')
+  rename = require('gulp-rename')
 ;
 
 var config = require('./webpack.config.js');
@@ -33,7 +34,14 @@ gulp.task("copyIndex", ["copy"], function(){
   ;
 });
 
-gulp.task("build", ["copyIndex"], function(){
+gulp.task("copyApp", ["copyIndex"], function(){
+  return gulp.src("./index.html")
+    .pipe( rename("app.html") )
+    .pipe( gulp.dest("public") )
+  ;
+});
+
+gulp.task("build", ["copyApp"], function(){
   return gulp.src("src/boot.js")
     .pipe( webpack( config ) )
     .pipe( gulp.dest("public/assets") )
