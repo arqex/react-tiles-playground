@@ -6,6 +6,8 @@ var Link = Tiles.Link;
 
 var Home = React.createClass({
   getInitialState: function(){
+    console.log( this.props.layout );
+    
     return {
       showTooMany: false
     };

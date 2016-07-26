@@ -24,7 +24,7 @@ var Menu = React.createClass({
 					<h1>react-tiles</h1>
 					<span className="beta">beta</span>
 				</div>
-				<div className="version">v{ Tiles.version }</div>
+				<div className="version">v0.4.0</div>
 				<div className="menuItems">
 					<div className="menuItem">
 						<span>· </span>
